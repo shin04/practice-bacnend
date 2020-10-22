@@ -2,21 +2,15 @@
 
 ```
 $ docker-compose build
-$ docker-compose up -d
+$ docker-compose up -d # バックエンドで実行
+$ docker-compose up # そのまま実行
 ```
 
-# ログの確認
+# ログの確認（バックエンドでの実行時）
 
 ```
 $ docker-compose logs golang # go
 $ docker-compose logs mysql # mysql
-```
-
-# 編集の反映
-
-```
-$ docker-compose down
-$ docker-compose up -d
 ```
 
 # ディレクトリ構成
