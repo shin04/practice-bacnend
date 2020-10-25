@@ -12,14 +12,17 @@ func (post *Post) CreatePost(db *gorm.DB) {
 	result := db.Create(&post)
 
 	if err := result.Error; err != nil {
-		// println(err)
-		c.Error(err)
+		println(err)
 	}
 }
 
 func GetAllPosts(db *gorm.DB) []Post {
 	var posts []Post
 	result := db.Find(&posts)
+
+	if err := result.Error; err != nil {
+		println(err)
+	}
 
 	return posts
 }
